@@ -77,7 +77,7 @@ typedef struct Game_ {
       vector<Drone*> myDrones = teams[myTeamId]->drones;
        // here I always ask my drones to reach the bottom right corner... stupid :-) 
       for(Drone *drone : myDrones) {
-          cout << drone->pos.x << " " << drone->pos.y << endl;
+          cout << "3999 1799" << endl;
       }
   }
   
