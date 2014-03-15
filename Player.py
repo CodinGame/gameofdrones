@@ -34,6 +34,7 @@ class Zone:
 
 # Read init information from standard input, if any
 players = drones = Zones = None
+
 def init():
     global players, drones, zones
     nbr_players, id, nbr_drones, nbr_zones = [int(x) for x in raw_input().split()]
