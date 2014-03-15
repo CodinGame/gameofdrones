@@ -36,17 +36,17 @@ class Zone:
 
 
 
-players = drones = zones = None
+players = drones = zones = nbr_drones = None
 my_id = None
 
 # Read init information from standard input
 def init():
-    global players, drones, zones, my_id
+    global players, drones, zones, my_id, nbr_drones
     nbr_players, id, nbr_drones, nbr_zones = [int(x) for x in raw_input().split()]
     my_id = id
     
     #create a sorted list of players, so that the player's index is the id
-    players = sorted([Player(nbr_drones / nbr_players, i) for i in xrange(nbr_players)], key=attrgetter('id'))
+    players = sorted([Player(nbr_drones, i) for i in xrange(nbr_players)], key=attrgetter('id'))
     
     #create zones
     zones = [Zone(Point(*[int(x) for x in raw_input().split()])) for i in xrange(nbr_zones)]
@@ -63,7 +63,7 @@ while 1:
             zones[i].dominant = players[i]
     
     for i in xrange(len(players)):
-        for j in xrange(Drone.nbr_instances / len(players)):
+        for j in xrange(nbr_drones):
             players[i].drones[j].point = Point(*[int(x) for x in raw_input().split()])
             
         
