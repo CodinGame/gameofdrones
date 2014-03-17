@@ -33,11 +33,11 @@ Game.prototype.init = function() {
     this.myTeamId = i;
 
     for(var areaId = 0; areaId < z; areaId++) {
-        var z = new Zone();
+        var zone = new Zone();
         var coords = readline().split(' ');
-        z.center.x = parseInt(coords[0]);
-        z.center.y = parseInt(coords[1]);
-        this.zones.push(z);
+        zone.center.x = parseInt(coords[0]);
+        zone.center.y = parseInt(coords[1]);
+        this.zones.push(zone);
     }
 
     for(var teamId = 0; teamId < p; teamId++) {
