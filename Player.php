@@ -171,3 +171,5 @@ class Game {
 $g = new Game();
 $g->init();
 $g->run();
+
+?>
