@@ -89,9 +89,8 @@ void main() {
 
 
         //  Print new pos for my drone
-        for (int i = 0; i < zones.length; i++) {
-            stderr.writeln("${zones[i].x} ${zones[i].y}");
-            print("${zones[i].x} ${zones[i].y}");
-        }
+	for (int i = 0; i < players[my_id].drones.length; i++) {
+            print("3999 1799");
+	}
     }
 }
