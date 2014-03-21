@@ -48,8 +48,8 @@ void init() {
         return new Zone(positions[0], positions[1]);
     });
     
-    players = new List.filled(nbr_players,
-      new Player()..drones = new List.filled(nbr_drones, new Drone.origin())
+    players = new List.generate(nbr_players, (_) =>
+      new Player()..drones = new List.generate(nbr_drones, (_) => new Position.origin())
     );
 
 }
