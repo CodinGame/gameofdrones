@@ -70,8 +70,8 @@ class Player {
 			z.owner = in.nextInt(); // update zones owner
 		}
 
-		for (int i = 0; i < teams.length; i++) {
-			Team t = teams[i];
+		
+        	for (Team t : teams) {
 			for (int j = 0; j < t.drones.length; j++) {
 				t.drones[j] = new Point(in.nextInt(), in.nextInt()); // update drones position
 			}
